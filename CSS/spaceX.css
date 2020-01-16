@@ -1,16 +1,49 @@
-
-
-body {
-    color: blue;
+html, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, center, ol, ul, li, fieldset, form, label, footer, header, 
+menu, nav, section {
+    margin: 0;
+	padding: 0;
+	border: 0;
 }
 
-#container {
+@font-face {
+    font-family: Barlow_Semi_Condensed;
+    src: url(../bilder/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../bilder/Roboto/Roboto-Light.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+}
+
+ul {
     display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 20px 0;
 }
 
-.block1 {
+a {
     flex: 1;
-    width: 200px;
-    margin: 30px;
-    padding: 20px;
+}
+
+h1 {
+    font-family: Barlow_Semi_Condensed;
+}
+
+p {
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+footer {
+    background-color: black;
+    padding: 40px 0px 40px 0px;
+    margin-top: 20px;;
 }

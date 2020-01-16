@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description"content="Explore the space with SpaceX. Find out when our next launch is, and follow launches live from this site.">
+    <meta name="description" content="Explore the space with SpaceX. Find out when our next launch is, and follow launches live from this site.">
     <meta name="keywords" content="Space, SpaceX, Launches, Rockets">
     <title>Explore the space with SpaceX</title>
-    <link rel="stylesheet" href="../CSS/tesla.css" type="text/css">
+    <link href="./../CSS/spaceX.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpaceX</title>
-    <link rel = "icon" type = "image/png" href = "../bilder/Artboard 1.png">
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
+                <img src="../bilder/spacerx-logo.eps">
                 <li><a href="#">Launches</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
-        <img id="hero_imgfront" src="../bilder/HeroIMGFrontPage.jpg">
-        <div class="nextlaunch"></div>
-        <div class="container_frontpage">
-            <div class="columns_front">
-                <img src="../bilder/Frontpage_firstIMG.jpg">
-                <div>
-                    <h1></h1>
-                    <p></p>
-                </div>
-            </div>
-            <div class="columns_front"></div>
-            <div class="columns_front"></div>
-        </div>
-        <footer></footer>
+        <img id="hero_imgfront" src="./../bilder/HeroIMGFrontPage.jpg">
     </header>
-    
-    <script src="../js/tesla.js"></script>
+    <div class="nextlaunch"></div>
+    <!------------Two columns page start-->
+    <div class="container_frontpage">
+        <div class="columns_front">
+            <img src="./../bilder/Frontpage_firstIMG.jpg">
+            <div>
+                <h1>Our Launches</h1>
+                <p>Find out when our next launch is. Here you will find information about the mission for the launch. Are you interested you can also read the descripton of the rocket. Follow the countdown to see the live feed when we are launching. All
+                    our launches is shown live with comments and several cameras attached to the rockets.</p>
+
+                <p>We are the biggest private contracter to NASA. Giving us a great responsibility of delivering reliable technology to the spaceprogram</p>
+
+                <p>Our ultimate goal is to put humans on Mars. Join us, and watch us live putting humans on Mars</p>
+                <a href="#">Launches</a>
+            </div>
+        </div>
+    <!------------Columns 2-->    
+        <div class="columns_front">
+            <div>
+                <h2>About SpaceX</h2>
+                <p>Want to know more about who we are? Are you interested in where we are in the world, where our testsites are, and what our mission is?</p>
+                <p>Find out more about us, and who we are.</p>
+                <a href="#">About us</a>
+            </div>
+        </div>
+    <!------------Columns 3-->    
+        <div class="columns_front">
+            <div>
+                <h2>Contact us</h2>
+                <p>Are you burning inside because you have a question? Are you wondering about how we do it? Or how much power there is in our rockets? Then why dont you send us
+                    a question? We will be happy to answer your question about everything we do.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="./../js/spaceXJS.js"></script>
 </body>
 </html>
