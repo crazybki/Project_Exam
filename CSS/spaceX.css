@@ -107,10 +107,13 @@ a:hover {
     position: relative;
     left: 85px;
     top: 30px;
-    border: white solid 2px;
     padding: 20px;
     border-radius: 12px;
+    transition: width 1s ease;
+    border: white solid 2px;
 }
+
+
 
 .paragraph_front {
     padding-bottom: 20px;
@@ -132,6 +135,12 @@ a:hover {
     position: relative;
     top: 100px;
     left: 610px;
+    border-radius: 15px;
+    color: white;
+}
+
+.button_front:hover {
+    padding: 20px;
     border-radius: 15px;
 }
 
