@@ -92,42 +92,53 @@ a:hover {
     position: relative;
     bottom: 2px;
     color: white;
+    
 }
 
-#clockContainer {
+#container_clock {
+    display: flex;
     text-align: center;
 }
 
-#clockContainer > .clock_div {
-    display: inline-block;
-    margin: 35px 0 0 0;
+#counter {
+    flex: 1;
 }
 
+.clock_hour_min_sec  {
+    display: inline-block;
+}
+   
+
+.clock_hour_min_sec {
+    font-size: 48px;
+    padding: 0 0 0 0;
+    font-family: Roboto;
+    margin: 40px 0 0 20px;    
+}
 
 #day_clock {
     font-size: 48px;
     font-family: Roboto;
     padding: 20px 0 0 0;
-    margin: 0 40px 0 0;
-}   
+}
 
-.clock_hour_min_sec {
-    font-size: 48px;
-    padding: 20px 0 0 20px;
+.clock_txt {
+    font-size: 35px;
+    margin: 0 10px 0 15px;
+    text-transform: uppercase;
     font-family: Roboto;
-    margin: 0 40px 0 0;
-    text-align: left;
 }
 
-#intro_txt {
-    font-size: 48px;
-}
 
 /*--------------COLUMNS_FRONT-PAGE----------------------------------------------------*/
 
 .container_frontpage {
     display: flex;
     clear: right;
+}
+
+.columns_front {
+    flex: 1;
 }
 
 
@@ -170,6 +181,18 @@ a:hover {
 .button_front:hover {
     padding: 20px;
     border-radius: 15px;
+    background-color: #2a5f83;
+}
+
+.btn-txt {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.4s ease-out;
+    font-family: Barlow_Semi_Condensed;
+    font-size: 36px;
+}
+
+.btn-txt:hover {
+    border-color: white;
 }
 
 /*--------------COLUMNS_FRONT-PAGE----------------------------------------------------*/
@@ -177,12 +200,16 @@ a:hover {
 
 /*--------------COLUMNS_FRONT-MIDDLE-PAGE----------------------------------------------------*/
 
-#columns_front_middle {
+#container_middle {
+    display: flex;
+}
+
+#columns_front_middle_2 {
     flex: 1;
     background-color: white;
 }
 
-.columns_front {
+#columns_front_middle_1{
     flex: 1;
 }
 
@@ -212,12 +239,6 @@ a:hover {
 }
 
 /*--------------COLUMNS_FRONT-MIDDLE-PAGE----------------------------------------------------*/
-
-
-
-
-
-
 
 
 /*--------------FOOTER----------------------------------------------------------------------*/
@@ -260,3 +281,118 @@ footer {
 
 
 /*--------------FOOTER----------------------------------------------------------------------*/
+
+/*--------------MEDIAQUERIES TABLETS----------------------------------------------------*/
+
+@media only screen and (max-width: 1350px) {
+    /*--------NAVIGATION------------------*/
+
+    #hamburger_menu {
+        max-width: 60px;
+        position: relative;
+        left: 340px;
+    }
+
+    #side_menu_open {
+        right: 0;
+        height: 100%;
+        width: 0px;   
+        background-color: black;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        padding-top: 110px;
+    }
+
+    #side_menu_open.open {
+        width: 350px;
+        transition: width.7s;
+    }
+    
+
+    li {
+        margin: 15px 0 0 0;
+        list-style: none;
+    }
+    
+    .nav_links {
+        font-size: 35px;
+        margin: 0 0 0 100px;
+        flex: none;
+    }
+
+    #closebtn {
+        color: white;
+    }
+
+
+    /*------------COUNTDOWN-------------*/
+    .clock_hour_min_sec {
+        font-size: 28px;
+        padding: 0 0 0 0;
+        font-family: Roboto;
+        margin: 50px 0 0 5px;    
+    }
+
+    .clock_txt {
+        font-size: 28px;
+        margin: 0 5px 0 5px;
+        text-transform: uppercase;
+        font-family: Roboto;
+    }
+
+    #day_clock {
+        font-size: 32px;
+    }
+
+    /*-------------layout-tablets---------------*/
+
+    .container_frontpage {
+        display: flex;
+        flex-direction: column-reverse;
+    }  
+
+    .columns_front {
+        flex: 1 100%;
+    }  
+
+    #container_middle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #columns_front_middle_1 {
+        flex: 1 100%;
+    }
+
+    #columns_front_middle_2 {
+        flex: 1 100%;
+    }
+
+    .button_front {
+        background-color: #005288;
+        padding: 20px;
+        font-size: 26px;
+        margin: 30px 40px 30px 0;
+    }
+
+    .column_text {
+        color: white;
+        width: 90%;
+        padding: 15px;
+        border-radius: 12px;
+        border: white solid 2px;
+        margin: 20px 0 20px 40px;
+    }
+
+    #middle_column_front {
+        color: white;
+        background-color: white;
+        width: 90%;
+        padding: 15px;
+        border-radius: 12px;    
+        border: black solid 2px;
+        margin: 20px 0 20px 40px;
+    }
+
+}

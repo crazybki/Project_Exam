@@ -17,35 +17,36 @@
         <nav>
             <ul>
                 <img id="spacex_logo" src="../bilder/spacerx-logo.svg">
-                <li><a href="#">Launches</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact us</a></li>
+                <img id="hamburger_menu" src="../bilder/hamburger.svg">
+                <p id="closebtn">X</p>
+                <div id="side_menu_open">
+                    <li><a class="nav_links" href="#">Launches</a></li>
+                    <li><a class="nav_links" href="#">About</a></li>
+                    <li><a class="nav_links" href="#">Contact</a></li>
+                </div>
             </ul>
         </nav>
         <img id="hero_imgfront" src="./../bilder/rovket_2 copy.svg">
     </header>
     <div id="nextlaunch">
-        <div id="clockContainer">
-            <p id="intro_txt">Falcon 9 launching in</p>
-            <div class="clock_div">
-                <p>day(s)</p>
+        <div id="container_clock">
+            <div id="counter">
+                <span class="clock_txt">Falcon launches in:</span>
                 <span id="day_clock" class="clock_hour_min_sec"></span>
-            </div>
-            <div class="clock_div">
-                <p>hour(s)</p>
+                <span class="clock_txt">Day(s)</span>
+              
                 <span id="hour_clock" class="clock_hour_min_sec"></span>
-            </div>
-            <div class="clock_div">
-                <p>minutes(s)</p>
+                <span class="clock_txt">hour(s)</span>
+            
                 <span id="minutes_clock" class="clock_hour_min_sec"></span>
-            </div>
-            <div class="clock_div">
-                <p>Second(s)</p>
+                <span class="clock_txt">minutes(s)</span>
+
                 <span id="seconds_clock" class="clock_hour_min_sec"></span>
-            </div>
-        </div>    
+                <span class="clock_txt">Second(s)</span>
+            </div> 
+        </div>
     </div>
-    <!------------Two columns page start-->
+    <!------------FIRST COLUMN----------------------------------------->
     <div class="container_frontpage">
         <div class="columns_front">
             <h1 class="frontpage_heading">Our Launches</h1>
@@ -57,14 +58,18 @@
                 <p class="paragraph_front">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
-            <a class="button_front" href="#">see launches</a>
+            <a class="button_front" href="#"><p class="btn-txt">see launches</p></a>
         </div>
-        <div class="columns_front"><img class="first_img_front" src="./../bilder/satellite-693216_1920 (1).jpg"></div>
+        <div class="columns_front">
+            <img class="first_img_front" src="./../bilder/satellite-693216_1920 (1).jpg">
+        </div>
     </div>
-    
-    <div class="container_frontpage">
-        <div class="columns_front"><img class="first_img_front" src="./../bilder/Frontpage_secondIMG.jpg"></div>
-        <div id="columns_front_middle">
+     <!------------SECOND COLUMN----------------------------------------->
+    <div id="container_middle">
+        <div id="columns_front_middle_1">
+            <img class="first_img_front" src="./../bilder/Frontpage_secondIMG.jpg">
+        </div>
+        <div id="columns_front_middle_2">
             <h1 id="frontpage_middleheading">About spaceX</h1>
             <div id="middle_column_front">
                 <p class="middle_column_text">Find out when our next launch is. Here you will find information about the mission for the launch. Are you interested you can also read the descripton of the rocket. Follow the countdown to see the live feed when we are launching. All
@@ -77,7 +82,7 @@
             <a class="button_front" href="#">About SpaceX</a>
         </div>
     </div>
-
+     <!------------THIRD COLUMN----------------------------------------->
     <div class="container_frontpage">
         <div class="columns_front">
             <h1 class="frontpage_heading">Contact us</h1>

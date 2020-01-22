@@ -13,6 +13,8 @@ var countDown = setInterval(function() {
     var minutesOfLaunch = Math.floor((timeToLaunch % (1000 * 60 * 60)) / (1000 * 60));
     var secondsOfLaunch = Math.floor((timeToLaunch % (1000 * 60)) / 1000);
 
+
+
     var dayElement = document.getElementById('day_clock');
     dayElement.innerHTML = dayOfLaunch;
     var hourElement = document.getElementById('hour_clock');
@@ -27,3 +29,16 @@ var countDown = setInterval(function() {
         document.getElementById('launch_paragraph').innerHTML = "Liftoff!!";
     }
 }, 1000);
+
+
+// Slide-in menu
+
+document.getElementById('hamburger_menu').addEventListener('click', slideMenu);
+
+function slideMenu () {
+    var menuSlide = document.getElementById('side_menu_open');
+    menuSlide.classList.toggle('open');
+}
+
+
+
