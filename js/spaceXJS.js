@@ -33,12 +33,22 @@ var countDown = setInterval(function() {
 
 // Slide-in menu
 
-document.getElementById('hamburger_menu').addEventListener('click', slideMenu);
+document.getElementById('hamburger').addEventListener('click', slideMenu);
 
 function slideMenu () {
-    var menuSlide = document.getElementById('side_menu_open');
-    menuSlide.classList.toggle('open');
-}
+    var menuSlideOpen = document.querySelector('.menu');
+    menuSlideOpen.classList.toggle('open');
+};
+
+
+
+document.getElementById('close_x').addEventListener('click', closeMenu);
+
+function closeMenu () {
+    var menuSlideClose = document.querySelector('.menu');
+    menuSlideClose.classList.toggle('close');
+    event.stopPropagation()
+};
 
 
 
