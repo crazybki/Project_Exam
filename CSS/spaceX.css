@@ -35,24 +35,28 @@ p {
 
 /*--------------NAVIGATION-----------------------------------------------*/
 
+#spacelogo_tablet {
+    display: none;
+}
+
 #hamburger {
     display: none;
 }
 
 #spacex_logo {
-    max-width: 100%;
+    width: 100%;
     margin: 0 20px 0 20px;
 }
 
 
 nav {
     background-color: black;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
-
-#flex_nav {
-    background-color: #0F1112;
-    height: 70px;
+li {
+    margin-top: 10px;
 }
 
 .menu {
@@ -181,11 +185,14 @@ a:hover {
 .button_front {
     background-color: #005288;
     padding: 20px;
-    font-size: 36px;
+    font-size: 32px;
     float: right;
     border-radius: 15px;
     color: white;
-    margin-top: 30px;
+    margin: 60px 90px 20px 0;
+    text-decoration: none;
+    font-family: Barlow_Semi_Condensed;
+    text-transform: uppercase;
 }
 
 .button_front:hover {
@@ -194,16 +201,6 @@ a:hover {
     background-color: #2a5f83;
 }
 
-.btn-txt {
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.4s ease-out;
-    font-family: Barlow_Semi_Condensed;
-    font-size: 36px;
-}
-
-.btn-txt:hover {
-    border-color: white;
-}
 
 /*--------------COLUMNS_FRONT-PAGE----------------------------------------------------*/
 
@@ -255,7 +252,6 @@ a:hover {
 footer {
     background-color: black;
     padding: 20px 0px 20px 0px;
-    margin-top: 10;
 
 }
 
@@ -299,7 +295,11 @@ footer {
 
     #hamburger {
         display: block;
-        width: 6%;
+        color: white;
+        font-size: 30px;
+        background-color:black;
+        border: none;
+        outline: none;
     }
 
     .menu {
@@ -314,6 +314,7 @@ footer {
         z-index: 1;
         display: block;
         list-style-type: none;
+        transition: width.7s;
     }
 
     .nav_links {
@@ -326,11 +327,18 @@ footer {
         transition: width.7s;
     }
 
-    .menu.close {
-        width: 0;
-        transition: width.7s; 
+    #spacelogo_tablet {
+        display: block;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        bottom: 50px;
     }
-    
+
+    #spacex_logo {
+        display: none;
+    }
 
     /*------------COUNTDOWN-------------*/
     .clock_hour_min_sec {
@@ -363,7 +371,6 @@ footer {
     }  
 
     #container_middle {
-        display: flex;
         flex-direction: column;
     }
 
@@ -384,11 +391,10 @@ footer {
 
     .column_text {
         color: white;
-        width: 90%;
+        max-width: 90%;
         padding: 15px;
         border-radius: 12px;
         border: white solid 2px;
-        margin: 20px 0 20px 40px;
     }
 
     #middle_column_front {
@@ -399,6 +405,31 @@ footer {
         border-radius: 12px;    
         border: black solid 2px;
         margin: 20px 0 20px 40px;
+    }
+
+    footer {
+        background-color: black;
+        padding: 20px 0px 20px 0px;
+        bottom: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    /*--------NAVIGATION------------------*/
+    .paragraph_front {
+        font-size: 18px;
+    }
+
+    #spacelogo_tablet {
+        width: 60%;
+        bottom: 45px;
+    }
+
+    #hero_imgfront {
+        width: 100%;
+        height: 130%;
     }
 
 }

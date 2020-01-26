@@ -35,20 +35,22 @@ var countDown = setInterval(function() {
 
 document.getElementById('hamburger').addEventListener('click', slideMenu);
 
+
+var hamburger = document.getElementById('hamburger');
+var menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', slideMenu);
+
 function slideMenu () {
-    var menuSlideOpen = document.querySelector('.menu');
-    menuSlideOpen.classList.toggle('open');
+
+    menu.classList.toggle('open');
+
+    if(menu.classList.contains('open')) {
+         hamburger.innerHTML = "X";
+    }
+
+    else {
+         hamburger.innerHTML = "&#9776;"; 
+    }
+
 };
-
-
-
-document.getElementById('close_x').addEventListener('click', closeMenu);
-
-function closeMenu () {
-    var menuSlideClose = document.querySelector('.menu');
-    menuSlideClose.classList.toggle('close');
-    event.stopPropagation()
-};
-
-
-
