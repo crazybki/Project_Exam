@@ -262,6 +262,18 @@ a:hover {
     padding: 8px;
 }
 
+/*----------LAYOUT-----------------------------*/
+#intro_about {
+    background-color: white;
+}
+
+#heading_about {
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 25px 0 15px 0;
+}
+
 
 
 
