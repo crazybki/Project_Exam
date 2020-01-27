@@ -19,12 +19,21 @@ body {
     src: url(../bilder/Roboto/Roboto-Light.ttf);
 }
 
+@font-face {
+    font-family: Roboto-Italic;
+    src: url(../bilder/Roboto/Roboto-Italic.ttf);
+}
+
 * {
     box-sizing: border-box;
 }
 
 
 h1 {
+    font-family: Barlow_Semi_Condensed;
+}
+
+h2 {
     font-family: Barlow_Semi_Condensed;
 }
 
@@ -265,15 +274,83 @@ a:hover {
 /*----------LAYOUT-----------------------------*/
 #intro_about {
     background-color: white;
+    height: 550px;
 }
 
 #heading_about {
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
-    padding: 25px 0 15px 0;
+    padding: 25px 0 25px 0;
+    font-family: Barlow_Semi_Condensed;
 }
 
+#mission_statement {
+    text-align: center;
+    font-family: Roboto-Italic;
+    font-size: 24px;
+}
+
+#aboutus_statement {
+    font-family: Roboto;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 1350px;
+    padding: 30px 0 30px 0;
+}
+
+#aboutus_statement_2 {
+    font-family: Roboto;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+#did_u_know_container {
+    height: 730px;
+}
+
+#container_diduknow {
+    display: flex;
+}
+
+.didu_know_flex {
+    flex: 1;
+    background-color: #0F1112;
+}
+
+.images_about {
+    height: 90%;
+    width: 90%;
+    margin: 10px;
+}
+
+#heading2_about {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin: 25px 0 25px 0;
+}
+
+.paragraph_about {
+    color: white;
+    font-size: 20px;
+    margin: 15px 55px 25px 15px;
+}
+
+#facilities {
+    height: 350px;
+    background-color: white;
+    display: flex;
+}
+
+.flex_maps {
+    flex: 1;
+}
+
+
+/*--------------ABOUT-LAYOUT-------------------------------------------------------------------*/
 
 
 
