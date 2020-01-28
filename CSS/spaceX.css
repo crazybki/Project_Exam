@@ -44,7 +44,7 @@ p {
 
 /*--------------NAVIGATION-----------------------------------------------*/
 
-#spacelogo_tablet {
+.spacelogo_tablet {
     display: none;
 }
 
@@ -274,7 +274,7 @@ a:hover {
 /*----------LAYOUT-----------------------------*/
 #intro_about {
     background-color: white;
-    height: 550px;
+    height: 370px;
 }
 
 #heading_about {
@@ -307,7 +307,7 @@ a:hover {
 }
 
 #did_u_know_container {
-    height: 730px;
+    height: 680px;
 }
 
 #container_diduknow {
@@ -317,6 +317,7 @@ a:hover {
 .didu_know_flex {
     flex: 1;
     background-color: #0F1112;
+    margin: 0 0 0 25px;
 }
 
 .images_about {
@@ -325,7 +326,7 @@ a:hover {
     margin: 10px;
 }
 
-#heading2_about {
+.heading2_about {
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -336,17 +337,36 @@ a:hover {
 .paragraph_about {
     color: white;
     font-size: 20px;
-    margin: 15px 55px 25px 15px;
+    margin: 15px 55px 25px 10px;
 }
 
 #facilities {
-    height: 350px;
+    height: 750px;
     background-color: white;
-    display: flex;
 }
 
-.flex_maps {
+#facility_headlne {
+    text-align: center;
+    font-size: 42px;
+    text-transform: uppercase;
+    padding: 25px 0 25px 0;
+}
+
+#container_facilities {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_facilites {
     flex: 1;
+    margin: 20px 0 0 15px;
+}
+
+.headline_maps {
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: Barlow_Semi_Condensed;
 }
 
 
@@ -406,6 +426,7 @@ footer {
 
     #hamburger {
         display: block;
+        position: absolute;
         color: white;
         font-size: 30px;
         background-color:black;
@@ -438,13 +459,13 @@ footer {
         transition: width.7s;
     }
 
-    #spacelogo_tablet {
+    .spacelogo_tablet {
         display: block;
         width: 40%;
         margin-left: auto;
         margin-right: auto;
         position: relative;
-        bottom: 50px;
+        bottom: 12px;
     }
 
     #spacex_logo {
@@ -533,7 +554,7 @@ footer {
         font-size: 18px;
     }
 
-    #spacelogo_tablet {
+    .spacelogo_tablet {
         width: 60%;
         bottom: 45px;
     }
