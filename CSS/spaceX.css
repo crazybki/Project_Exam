@@ -94,9 +94,8 @@ li {
 /*--------------NAVIGATION-----------------------------------------------*/
 
 /*--------------HEROIMG-----------------------------------------------*/
-#hero_imgfront {
+.hero_imgfront {
     width: 100%;
-    height: 100%;
 }
 
 .first_img_front {
@@ -112,7 +111,7 @@ li {
     width: 100%;
     height: 200px;
     position: relative;
-    bottom: 2px;
+    bottom: 5px;
     color: white;
     
 }
