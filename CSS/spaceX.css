@@ -60,8 +60,7 @@ p {
 
 nav {
     background-color: black;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    height: 110px;
 }
 
 li {
@@ -84,7 +83,7 @@ li {
     transition: 0.5s;
 }
 
-a:hover {
+.nav_links:hover {
     background-color: #005288;
     border-radius: 10px;
     padding: 8px;
@@ -271,13 +270,15 @@ a:hover {
     padding: 8px;
 }
 
-/*----------LAYOUT-----------------------------*/
+
+
+/*----------LAYOUT - ABOUT-----------------------------*/
 #intro_about {
     background-color: white;
     height: 470px;
 }
 
-#heading_about {
+.heading_about {
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
@@ -306,9 +307,7 @@ a:hover {
     margin: 0 auto;
 }
 
-#did_u_know_container {
-    height: 680px;
-}
+
 
 #container_diduknow {
     display: flex;
@@ -344,84 +343,35 @@ a:hover {
     background-color: white;
 }
 
-#facility_headlne {
-    text-align: center;
-    font-size: 42px;
-    text-transform: uppercase;
-    padding: 25px 0 25px 0;
+#background_container {
+    background-color: white;
 }
 
-#container_facilities {
+#map_container {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.flex_facilites {
+.map {
     flex: 1;
-    margin: 0 0 0 30px;
-    padding: 0 0 0 30px;
+    margin: 15px 15px;
 }
 
-.headline_maps {
-    text-align: center;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: Barlow_Semi_Condensed;
-}
-
-.maps_txt {
-    font-family: Roboto;
-    text-align: center;
-}
 
 
 /*--------------ABOUT-LAYOUT-------------------------------------------------------------------*/
 
-
-
-
-
-/*--------------ABOUT HTML-------------------------------------------------------------------*/
-
-
 /*--------------FOOTER----------------------------------------------------------------------*/
+
 footer {
-    background-color: black;
-    padding: 20px 0px 20px 0px;
-
+    background-color: blue;
+    width: 100%;
+    padding: 60px 0;
 }
-
-.socialmedia_images {
-    display: inline-block;
-    margin-left: 600px;
-}
-
-.facebook_png {
-    height: 4%;
-    width: 4%;
-    margin: 0 60px 30px 60px;
-}
-
-.youtube_png {
-    height: 4%;
-    width: 11%;
-    margin: 0 60px 45px 60px;
-}
-
-.twitter_png {
-    height: 4%;
-    width: 4%;
-    margin: 0 60px 40px 60px;
-}
-
-.instagram_png {
-    height: 4%;
-    width: 6%;
-    margin: 0px 60px 20px 60px;
-}
-
 
 
 /*--------------FOOTER----------------------------------------------------------------------*/
+
 
 /*--------------MEDIAQUERIES TABLETS----------------------------------------------------*/
 
@@ -436,7 +386,13 @@ footer {
         background-color:black;
         border: none;
         outline: none;
+        margin-top: 30px;
     }
+
+    #img_tablets_mobile {
+        display: none;
+    }
+
 
     .menu {
         padding: 20px 0 0 0;
@@ -465,13 +421,9 @@ footer {
 
     .spacelogo_tablet {
         display: block;
-        width: 40%;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    #spacex_logo {
-        display: none;
     }
 
     /*------------COUNTDOWN-------------*/
@@ -541,13 +493,10 @@ footer {
         margin: 20px 0 20px 40px;
     }
 
-    footer {
-        background-color: black;
-        padding: 20px 0px 20px 0px;
-        bottom: 50%;
-    }
+    
 
-  /*--------------------------------------*/
+
+  /*-----------ABOUT---------------------------*/
   
     #aboutus_statement {
         max-width: 700px;
@@ -563,8 +512,30 @@ footer {
         flex-direction: column;
     }
 
-}
+    #container_diduknow {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .didu_know_flex {
+        flex: 1 45%;
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .paragraph_about {
+        margin: 10px 30px 15px 10px;
+    }
+    
+    .images_about {
+        margin: 25px 10px 10px 10px;
+    }
+
+
+}
 @media only screen and (max-width: 767px) {
 
     /*--------NAVIGATION------------------*/
@@ -577,9 +548,11 @@ footer {
         bottom: 45px;
     }
 
-    #hero_imgfront {
-        display: none;
+    #hamburger {
+        margin-top: 20px;
     }
+
+
 
     /*--------LAYOUT------------------*/
 
@@ -611,14 +584,44 @@ footer {
 
     /*-----------------------*/
     .clock_txt {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     #day_clock {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .clock_hour_min_sec {
-        font-size: 20px;
+        font-size: 18px;
     }
+
+      /*-------ABOUT PHONE----------------*/
+
+    #mission_statement {
+        font-size: 20px;
+        margin: 0 10px 0 10px;
+    }
+
+    #aboutus_statement {
+        font-size: 16px;
+        margin: 0 10px 0 10px;
+    }
+
+    #aboutus_statement_2 {
+        font-size: 16px;
+        margin: 0 10px 0 10px;
+    }
+
+    .heading_about {
+        font-size: 38px;
+    }
+
+    #heading2_about {
+        font-size: 38px;
+    }
+
+    .paragraph_about {
+        font-size: 16px;
+    }
+
 }
