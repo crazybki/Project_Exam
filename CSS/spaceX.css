@@ -356,9 +356,77 @@ li {
     margin: 15px 15px;
 }
 
-
-
 /*--------------ABOUT-LAYOUT-------------------------------------------------------------------*/
+
+/*--------------CONTACT-LAYOUT-------------------------------------------------------------------*/
+
+input[type=text] {
+    width: 100%;
+    padding: 13px;
+    margin: auto;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: roboto;
+}
+
+input[type=text]:focus {
+    background-color: #F5F5F5;
+}
+
+textarea {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-radius: 6px;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+textarea:focus {
+    background-color: #F5F5F5;
+}
+
+fieldset {
+    max-width: 600px;
+    margin: auto;
+    background-color: #005288;
+    padding: 50px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+}
+
+label {
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.text_area {
+    margin-bottom: 25px;
+}
+
+input[type=submit] {
+    background-color: #22272B;
+    color: white;
+    width: 100%;
+    padding: 30px;
+    font-size: 20px;
+    font-family: Roboto;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px #999;
+    border-radius: 7px
+}
+
+input[type=submit]:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+
+
+/*--------------CONTACT-LAYOUT-------------------------------------------------------------------*/
 
 /*--------------FOOTER----------------------------------------------------------------------*/
 
