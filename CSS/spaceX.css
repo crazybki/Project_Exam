@@ -423,6 +423,15 @@ input[type=submit]:active {
     transform: translateY(4px);
 }
 
+#errormsg_firstname {
+    color: white;
+
+}
+
+#errormsg_lastname {
+    color: white;
+}
+
 
 
 
