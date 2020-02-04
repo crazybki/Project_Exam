@@ -33,7 +33,7 @@ document.getElementById('send').addEventListener('click', submitLastName);
 
 function submitLastName () {
     var checkLastName = /^[a-z/A-Z\-]{3,}$/;
-    inputLastName = checkLastName.test(document.getElementById('lastname').value);
+    var inputLastName = checkLastName.test(document.getElementById('lastname').value);
     var styleLastName = document.getElementById('lastname');
     var userInputLastname = document.getElementById('lastname').value;
 
@@ -46,8 +46,28 @@ function submitLastName () {
         event.preventDefault();
         styleLastName.style.backgroundColor = 'red';
         var errorLastName = document.getElementById('errormsg_lastname');
-        errorLastName.innerHTML = 'Are you sure ' + userInputLastname + ' is your name? Please try again.'
+        errorLastName.innerHTML = 'Are you sure ' + userInputLastname + ' is your name? Please try again.';
     }
 };
 
 
+document.getElementById('send').addEventListener('click', submitEmail);
+
+function submitEmail () {
+    var checkEmail = /[a-z0-9!#$%&'*+/=?^_‘{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_‘{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    var inputEmail = checkEmail.test(document.getElementById('email').value);
+    var styleEmail = document.getElementById('email');
+    var userInputEmail = document.getElementById('email').value;
+    
+    if (checkEmail === true) {
+        event.preventDefault();
+        styleEmail.style.backgroundColor = 'green';
+        var errorEmail = document.getElementById('errormsg_email');
+        errorEmail.innerHTML = 'Thanks ' + userInputEmail + ' :)';  
+    } else {
+        event.preventDefault();
+        styleEmail.style.backgroundColor = 'red';
+        var errorEmail = document.getElementById('errormsg_email');
+        errorEmail.innerHTML = 'Are you sure ' + userInputEmail + ' is your name? Please try again.';
+    }
+};

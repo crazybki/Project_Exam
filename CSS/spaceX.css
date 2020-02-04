@@ -432,6 +432,10 @@ input[type=submit]:active {
     color: white;
 }
 
+#errormsg_email {
+    color: white;
+}
+
 
 
 
