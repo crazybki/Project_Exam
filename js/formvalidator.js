@@ -62,8 +62,7 @@ function submitEmail () {
     if (checkEmail === true) {
         event.preventDefault();
         styleEmail.style.backgroundColor = 'green';
-        var errorEmail = document.getElementById('errormsg_email');
-        errorEmail.innerHTML = 'Thanks ' + userInputEmail + ' :)';  
+          
     } else {
         event.preventDefault();
         styleEmail.style.backgroundColor = 'red';
