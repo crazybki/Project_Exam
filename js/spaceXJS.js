@@ -1,6 +1,8 @@
 
 //Countdown on pages
 
+
+
 var launchday = new Date('Mar 1, 2020 23:59:59').getTime();
 console.log(launchday)
 
