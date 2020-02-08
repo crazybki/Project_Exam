@@ -436,6 +436,10 @@ input[type=submit]:active {
     color: white;
 }
 
+#errormsg_txtarea {
+    color: white;
+}
+
 
 
 
@@ -613,7 +617,11 @@ footer {
     .images_about {
         margin: 25px 10px 10px 10px;
     }
-
+    /*--------------CONTACT-LAYOUT-------------------------------------------------------------------*/
+    textarea {
+        width: 100%;
+    }
+    
 
 }
 @media only screen and (max-width: 767px) {

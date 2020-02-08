@@ -16,13 +16,17 @@ function submitName () {
 
     if (inputfirstName === true) {
         event.preventDefault();
+ 
+    } else if (userInput === '') {
+        event.preventDefault();
+        var getErrormsg = document.getElementById('errormsg_firstname');
+        getErrormsg.innerHTML = 'Input field is blank, please type in your first name'; 
 
-        console.log('correct')  
     } else {
         event.preventDefault();
         styleTxtField.style.backgroundColor = 'red';
         var getErrormsg = document.getElementById('errormsg_firstname');
-        getErrormsg.innerHTML = 'Please enter a your first name';
+        getErrormsg.innerHTML = 'Please enter your first name';
     }
 };
 
@@ -39,7 +43,13 @@ function submitLastName () {
     if (inputLastName === true) {
         event.preventDefault();
 
-    } else {
+    } else if (userInputLastname === '') {
+        event.preventDefault();
+        var errorLastName = document.getElementById('errormsg_lastname');
+        errorLastName.innerHTML = 'Input field is blank, please type in your last name';
+    }
+    
+    else {
         event.preventDefault();
         styleLastName.style.backgroundColor = 'red';
         var errorLastName = document.getElementById('errormsg_lastname');
@@ -54,15 +64,22 @@ function submitEmail () {
     var checkEmail = /[a-z0-9/=?^{|}-]+(?:\.[a-z0-9!'*+/=?^_‘{|}]+)*@(?:[a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     var inputEmail = checkEmail.test(document.getElementById('email').value);
     var styleEmail = document.getElementById('email');
+    var userInput = document.getElementById('email').value;
     
     if (inputEmail === true) {
         event.preventDefault();
           
+    } else if (userInput === '') {
+        event.preventDefault();
+        var errorEmail = document.getElementById('errormsg_email');
+        errorEmail.innerHTML = 'Input field is blank, please type in your email adress';
+
     } else {
         event.preventDefault();
         styleEmail.style.backgroundColor = 'red';
         var errorEmail = document.getElementById('errormsg_email');
         errorEmail.innerHTML = 'Please enter a valid email adress';
+        console.log('something written')
     }
 };
 
@@ -73,14 +90,23 @@ function submitQuestion () {
     var checkTextArea = /[a-z/A-Z\-\w\W]/;
     var txtAreaInput = checkTextArea.test(document.getElementById('questions').value);
     var txtAreaStyle = document.getElementById('questions');
+    var txtUserInput = document.getElementById('questions').value;
 
     if (txtAreaInput === true) {
         event.preventDefault();
-        
-    } else {
+
+    } else if (txtUserInput === '') {
         event.preventDefault();
-        txtAreaStyle.style.backgroundColor = 'red';
         var errorArea = document.getElementById('errormsg_txtarea');
-        errorArea.innerHTML = 'Please let'
+        errorArea.innerHTML = 'You havnt written us a question, the text area is blank. Please ask us a question';
     }
 };
+
+document.getElementById('send').addEventListener('click', submitForm);
+
+function submitForm (submitQuestion) {
+    if (submitQuestion === true) {
+        var errorArea = document.getElementById('errormsg_txtarea');
+        errorArea.innerHTML = 'thanks for your submit'
+    }
+}
