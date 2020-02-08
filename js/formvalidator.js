@@ -16,14 +16,13 @@ function submitName () {
 
     if (inputfirstName === true) {
         event.preventDefault();
-        styleTxtField.style.backgroundColor = 'green';
-        var getErrormsg = document.getElementById('errormsg_firstname');
-        getErrormsg.innerHTML = "Thanks " + userInput + ' :)';
+
         console.log('correct')  
     } else {
         event.preventDefault();
         styleTxtField.style.backgroundColor = 'red';
-        getErrormsg.innerHTML = "Are you sure " + userInput + ' is your name? Please try again.';
+        var getErrormsg = document.getElementById('errormsg_firstname');
+        getErrormsg.innerHTML = 'Please enter a your first name';
     }
 };
 
@@ -39,14 +38,12 @@ function submitLastName () {
 
     if (inputLastName === true) {
         event.preventDefault();
-        styleLastName.style.backgroundColor = 'green';
-        var errorLastName = document.getElementById('errormsg_lastname');
-        errorLastName.innerHTML = 'Thanks ' + userInputLastname + ' :)'; 
+
     } else {
         event.preventDefault();
         styleLastName.style.backgroundColor = 'red';
         var errorLastName = document.getElementById('errormsg_lastname');
-        errorLastName.innerHTML = 'Are you sure ' + userInputLastname + ' is your name? Please try again.';
+        errorLastName.innerHTML = 'Please enter your last name'; 
     }
 };
 
@@ -54,19 +51,36 @@ function submitLastName () {
 document.getElementById('send').addEventListener('click', submitEmail);
 
 function submitEmail () {
-    var checkEmail = /[a-z0-9!#$%&'*+/=?^_‘{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_‘{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    var checkEmail = /[a-z0-9/=?^{|}-]+(?:\.[a-z0-9!'*+/=?^_‘{|}]+)*@(?:[a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
     var inputEmail = checkEmail.test(document.getElementById('email').value);
     var styleEmail = document.getElementById('email');
-    var userInputEmail = document.getElementById('email').value;
     
-    if (checkEmail === true) {
+    if (inputEmail === true) {
         event.preventDefault();
-        styleEmail.style.backgroundColor = 'green';
           
     } else {
         event.preventDefault();
         styleEmail.style.backgroundColor = 'red';
         var errorEmail = document.getElementById('errormsg_email');
-        errorEmail.innerHTML = 'Are you sure ' + userInputEmail + ' is your name? Please try again.';
+        errorEmail.innerHTML = 'Please enter a valid email adress';
+    }
+};
+
+
+document.getElementById('send').addEventListener('click', submitQuestion);
+
+function submitQuestion () {
+    var checkTextArea = /[a-z/A-Z\-\w\W]/;
+    var txtAreaInput = checkTextArea.test(document.getElementById('questions').value);
+    var txtAreaStyle = document.getElementById('questions');
+
+    if (txtAreaInput === true) {
+        event.preventDefault();
+        
+    } else {
+        event.preventDefault();
+        txtAreaStyle.style.backgroundColor = 'red';
+        var errorArea = document.getElementById('errormsg_txtarea');
+        errorArea.innerHTML = 'Please let'
     }
 };
