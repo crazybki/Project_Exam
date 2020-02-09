@@ -466,15 +466,18 @@ footer {
 }
 
 #twitter_logo {
-    width: 13%;
+    width: 50px;
+    margin: 0 40px 0 40px;
 }
 
 #instagram_logo {
-    width: 32%;
+    width: 50px;
+    margin: 0 40px 0 40px;
 }
 
 #facebook_logo {
-    width: 32%;
+    width: 50px;
+    margin: 0 40px 0 40px;
 }
 
 /*--------------FOOTER----------------------------------------------------------------------*/
