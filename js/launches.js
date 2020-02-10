@@ -1,6 +1,6 @@
 //Fetch API past launches
 
-fetch ("https://api.spacexdata.com/v3/launches/past/?limit=15&offset=74")
+fetch ("https://api.spacexdata.com/v3/launches/past/?limit=14&offset=74")
   .then(result => result.json())
     .then ((res) => {
         pastLaunches(res);
@@ -27,3 +27,5 @@ function pastLaunches (result) {
         getLaunches.appendChild(launchInfo)
     }
 };
+
+//Fetch upcoming Launches 

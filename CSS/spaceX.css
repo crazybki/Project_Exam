@@ -458,6 +458,7 @@ input[type=submit]:active {
     font-size: 38px;
     color: white;
     text-transform: uppercase;
+    margin: 0 0 0 20px;
 }
 
 .launch_info {
@@ -468,7 +469,7 @@ input[type=submit]:active {
 
 .launch_links {
     margin: 20px 0 10px 20px;
-    width: 90%;
+    width: 85%;
     height: 6%;
 }
 
