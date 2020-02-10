@@ -2,11 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="./../CSS/spaceX.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>See our our launches</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <button id="hamburger">&#9776;</button>
+                <a href="../html/index.html" id="img_link"><img class="spacelogo_tablet" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a>
+                    <div class="menu">
+                        <li><a href="../html/index.html" id="img_tablets_mobile"><img id="spacex_logo" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a></li>
+                        <li><a class="nav_links" href="#">Launches</a></li>
+                        <li><a class="nav_links" href="../html/about.html">About</a></li>
+                        <li><a class="nav_links" href="contact_us.html">Contact</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <img class="hero_imgfront" src="../bilder/spacex-pnPS3Ox_2vE-unsplash.jpg" alt="Image of spacerocket from SpaceX ready to launch">
+        <div id="nextlaunch">
+            <div id="container_clock">
+                <div id="counter">
+                    <span class="clock_txt">Next launch in:</span>
+                    <span id="day_clock" class="clock_hour_min_sec"></span>
+                    <span class="clock_txt">Days</span>
+                  
+                    <span id="hour_clock" class="clock_hour_min_sec"></span>
+                    <span class="clock_txt">hrs</span>
+                
+                    <span id="minutes_clock" class="clock_hour_min_sec"></span>
+                    <span class="clock_txt">mins</span>
     
+                    <span id="seconds_clock" class="clock_hour_min_sec"></span>
+                    <span class="clock_txt">Sec</span>
+                </div> 
+            </div>
+        </div>
+    </header>
+    <h1 class="frontpage_heading">Our launches</h1>
+    <div id="container_launches">
+        <div id="launches_flex">
+
+        </div>
+        <div class="launches_flex1">
+
+        </div>
+    </div>
+    <footer>
+        <div class="socialmedia">    
+            <img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo">
+        </div>
+        <div class="socialmedia">    
+            <img id="instagram_logo" src="../bilder/social_media_icons/instagram_White_logo.svg" alt="Image of Instagram logo">
+        </div>
+        <div class="socialmedia">
+            <img id="twitter_logo" src="../bilder/social_media_icons/Twitter_Social_Icon_Circle_White.png" alt="image of Twitter icon">
+        </div>
+    </footer>
+<script src="./../js/spaceXJS.js"></script>
+<script src="../js/launches.js"></script>    
 </body>
 </html>

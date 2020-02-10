@@ -308,7 +308,7 @@ li {
 
 
 
-#container_diduknow {
+#container_diduknow_flex {
     display: flex;
 }
 
@@ -439,11 +439,46 @@ input[type=submit]:active {
 #errormsg_txtarea {
     color: white;
 }
-
-
-
-
 /*--------------CONTACT-LAYOUT-------------------------------------------------------------------*/
+
+
+
+
+/*--------------LAUNCHES-LAYOUT-------------------------------------------------------------------*/
+
+#container_launches {
+    display: flex;
+} 
+
+.launches_flex {
+    flex: 1;
+}
+
+.launch_heading {
+    font-size: 38px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.launch_info {
+    color: white;
+    max-width: 700px;
+    margin: 20px 0 20px 20px;
+}
+
+.launch_links {
+    margin: 20px 0 10px 20px;
+    width: 90%;
+    height: 6%;
+}
+
+
+
+/*--------------LAUNCHES-LAYOUT-------------------------------------------------------------------*/
+
+
+
+
 
 /*--------------FOOTER----------------------------------------------------------------------*/
 
