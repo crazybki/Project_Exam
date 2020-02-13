@@ -35,9 +35,6 @@ var countDown = setInterval(function() {
 
 // Slide-in menu
 
-document.getElementById('hamburger').addEventListener('click', slideMenu);
-
-
 var hamburger = document.getElementById('hamburger');
 var menu = document.querySelector('.menu');
 
@@ -56,3 +53,4 @@ function slideMenu () {
     }
 
 };
+
