@@ -26,34 +26,26 @@
         <div id="nextlaunch">
             <div id="container_clock">
                 <div id="counter">
-                    <span class="clock_txt">Next launch in:</span>
-                    <span id="day_clock" class="clock_hour_min_sec"></span>
-                    <span class="clock_txt">Days</span>
-                  
-                    <span id="hour_clock" class="clock_hour_min_sec"></span>
-                    <span class="clock_txt">hrs</span>
-                
-                    <span id="minutes_clock" class="clock_hour_min_sec"></span>
-                    <span class="clock_txt">mins</span>
-    
-                    <span id="seconds_clock" class="clock_hour_min_sec"></span>
-                    <span class="clock_txt">Sec</span>
+
                 </div> 
             </div>
         </div>
     </header>
     <h1 class="frontpage_heading">Our launches</h1>
+    <div id="last_launch"></div>
+
     <div id="container_launches">
         <div id="launches_flex">
-
+            <button id="show_past_launchesBtn">See past launches</button>
+            <div class="single_past_launches"></div>
         </div>
 
         <div id="launches_flex1">
-            <button id="show_launches">Show Launches</button>
-            <div class="single_launch">
-            </div>
+            <button id="show_launches">Show upcoming Launches</button>
+            <div class="single_launch"></div>
         </div>
     </div>
+    
     <footer>
         <div class="socialmedia">    
             <img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo">

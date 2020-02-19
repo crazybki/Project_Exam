@@ -7,6 +7,7 @@ menu, nav, section {
 
 body {
     background-color:#0F1112;
+    height: 100%;
 }
 
 @font-face {
@@ -116,38 +117,14 @@ li {
     
 }
 
-#container_clock {
-    display: flex;
+#counter_clock {
+    font-size: 38px;
+    font-family: roboto;
+    font-weight: 700;
+    display: block;
     text-align: center;
-}
-
-#counter {
-    flex: 1;
-}
-
-.clock_hour_min_sec  {
-    display: inline-block;
-}
-   
-
-.clock_hour_min_sec {
-    font-size: 48px;
-    padding: 0 0 0 0;
-    font-family: Roboto;
-    margin: 40px 0 0 20px;    
-}
-
-#day_clock {
-    font-size: 48px;
-    font-family: Roboto;
-    padding: 20px 0 0 0;
-}
-
-.clock_txt {
-    font-size: 35px;
-    margin: 0 10px 0 15px;
     text-transform: uppercase;
-    font-family: Roboto;
+    padding-top: 65px;
 }
 
 
@@ -446,12 +423,18 @@ input[type=submit]:active {
 
 /*--------------LAUNCHES-LAYOUT-------------------------------------------------------------------*/
 
+
+
 #container_launches {
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
 } 
 
 #launches_flex {
     flex: 1;
+    margin: 0 0 0 10px;
+
 }
 
 #launches_flex1 {
@@ -463,18 +446,20 @@ input[type=submit]:active {
     color: black;
     text-transform: uppercase;
     margin: 10px 0 10px 0;
+    padding: 10px;
 }
 
 .launch_info {
-    color: white;
     max-width: 700px;
     margin: 20px 0 20px 20px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .launch_links {
     margin: 20px 0 10px 20px;
     width: 85%;
-    height: 6%;
+    height: 350px;
 }
 
 .launch_dates {
@@ -487,15 +472,21 @@ input[type=submit]:active {
 
 .countdown_clock {
     color: black;
-    font-size: 28px;
+    font-size: 30px;
     font-family: Roboto;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    display: block;
+    margin: 5px 0 15px 0;
 }
 
 .launch_place {
     color: black;
     font-size: 20px;
     font-family: Roboto;
-
+    font-weight: 600;
+    margin: 0 0 0 11px;
+    padding-bottom: 20px;
 }
 
 #showHide_launches {
@@ -504,17 +495,70 @@ input[type=submit]:active {
 }
 
 .single_launch {
+    
+    display: none;
+    transition: height 0.7s;
+}
+
+.single_launch.open {
+    display: block;
+    transition: 0.7s;
+}
+
+#show_launches {
+    background-color: #005288;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    border: none;
+    width: 97%;
+    height: 40px;
+    outline: none;
+    transition: 1s;
+    margin: 40px 0 0 0;
+    text-transform: uppercase;
+}
+
+#show_launches:hover {
+    background-color: #2575b3;
+}
+
+.upcoming_launch_info {
+    background-color: white;
+    margin: 20px 10px 20px 0;
+}
+
+#show_past_launchesBtn {
+    background-color: #005288;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    border: none;
+    width: 90%;
+    height: 40px;
+    outline: none;
+    transition: 1s;
+    margin: 40px 0 0 0;
+    text-transform: uppercase;
+}
+
+#show_past_launchesBtn:hover {
+    background-color: #2575b3;
+}
+
+.single_past_launches {
     width: 100%;
     display: none;
     transition: width.7s;
 }
 
-.single_launch.open {
+.single_past_launches.open {
     display: block;
     transition: width.7s;
 }
 
-#show_launches {
+
+.show_btn {
     background-color: #005288;
     color: white;
     font-family: Roboto;
@@ -526,23 +570,44 @@ input[type=submit]:active {
     transition: 1s;
 }
 
-#show_launches:hover {
-    background-color: #153f61;
-    
+#last_launch {
+    background-color: #22272B;
+    color: white;
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-.countdown_clock {
-    display: block;
-    margin: 30px 0 30px 0;
+#heading_latest_launch {
+    text-transform: uppercase;
+    font-size: 35px;
+    margin: 0 0 15px 0;
+    text-align: center;
 }
 
-.upcoming_launch_info {
-    background-color: #A7A9AC;
-    padding: 0 0 0 15px;
-    width: 80%;
+#launch_date {
+    text-align: center;
+    font-size: 30px;
+    font-family: Barlow_Semi_Condensed;
+    margin: 0 0 30px 0;
 }
 
+.past_launches {
+    background-color: white;
+    width: 90%;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
 
+.rocket {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 0 11px;
+    padding-bottom: 15px;
+}
 
 /*--------------LAUNCHES-LAYOUT-------------------------------------------------------------------*/
 
@@ -555,9 +620,7 @@ input[type=submit]:active {
 footer {
     background-color: black;
     width: 100%;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: absolute;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -683,6 +746,10 @@ footer {
         flex: 1 100%;
     }
 
+    .frontpage_heading {
+        font-size: 34px;
+    }
+
     .button_front {
         background-color: #005288;
         padding: 20px;
@@ -753,7 +820,57 @@ footer {
         width: 100%;
     }
     
+    /*---------------Counter-------------------------------------------------------------------------*/
+     #counter_clock {
+         font-size: 24px;
+     }       
 
+    /*---------------Counter-------------------------------------------------------------------------*/
+
+    /*---------------Launches-------------------------------------------------------------------------*/
+     #heading_latest_launch {
+         font-size: 28px;
+     }
+
+     #launch_date {
+        font-size: 26px;
+     }
+
+     #detail_latest_launch {
+         font-size: 18px;
+     }
+
+     #last_launch {
+         max-width: 550px;
+     }
+
+     .launch_heading {
+         font-size: 30px;
+     }
+
+     .countdown_clock {
+         font-size: 24px;
+     }
+
+     .launch_links {
+        margin: 20px 0 10px 20px;
+        width: 85%;
+        height: 150px;
+    }
+
+    .launch_place {
+        font-size: 18px;
+    }
+
+    .rocket {
+        font-size: 18px;
+    }
+
+    .launch_info {
+        font-size: 18px;
+    }
+
+    /*---------------Launches-------------------------------------------------------------------------*/
 }
 @media only screen and (max-width: 767px) {
 
@@ -775,16 +892,13 @@ footer {
 
     /*--------LAYOUT------------------*/
 
-    .frontpage_heading {
-        font-size: 34px;
-    }
 
     .paragraph_front {
         font-size: 16px;
     }
 
     .button_front {
-        font-size: 28px;
+        font-size: 20px;
         padding: 15px;
     }
 
@@ -817,7 +931,7 @@ footer {
       /*-------ABOUT PHONE----------------*/
 
     #mission_statement {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0 10px 0 10px;
     }
 
@@ -832,15 +946,158 @@ footer {
     }
 
     .heading_about {
-        font-size: 38px;
+        font-size: 28px;
     }
 
-    #heading2_about {
-        font-size: 38px;
+    .heading2_about {
+        font-size: 28px;
     }
 
     .paragraph_about {
         font-size: 16px;
+    }
+
+    /*---------------Counter-------------------------------------------------------------------------*/
+    #counter_clock {
+        font-size: 16px;
+        position: relative;
+        bottom: 50px;
+    }       
+
+   /*---------------Counter-------------------------------------------------------------------------*/
+
+   /*--------------COUNTER FRONT----------------------------------------------------*/
+
+    #nextlaunch{
+        background-color: black;
+        width: 100%;
+        height: 50px;
+        
+    }
+/*--------------COUNTER FRONT----------------------------------------------------*/
+
+/*--------------LAUNCHES----------------------------------------------------*/
+    .frontpage_heading {
+        font-size: 28px;
+    }
+
+    #heading_latest_launch {
+        font-size: 24px;
+    }
+
+    #launch_date {
+        font-size: 22px;
+    }
+
+    #detail_latest_launch {
+        font-size: 16px;
+    }
+
+    #last_launch {
+        max-width: 380px;
+    }
+
+    #container_launches {
+        flex-direction: column;
+    }
+
+    #show_past_launchesBtn {
+        width: 80%;
+        margin: 40px 0 0 35px;
+    }
+    
+    #show_launches {
+        width: 80%;
+        margin: 30px 0 0 35px;
+    }
+
+    .past_launches {
+        width: 100%;
+    }
+
+    #launches_flex {
+        margin: 0 20px 0 20px;
+    }
+
+    #launches_flex1 {
+        margin: 0 20px 0 20px;
+    }
+
+    .upcoming_launch_info {
+        width: 100%;
+    }
+
+    .launch_info {
+        font-size: 16px;
+    }
+
+    .launch_place {
+        font-size: 16px;
+        margin: 0 10px 0 10px;
+    }
+
+    .rocket {
+        font-size: 16px;
+    }
+
+    #twitter_logo {
+        margin: 0 40px 0 0;
+        width: 35px;
+    }
+
+    #instagram_logo {
+        margin: 0 40px 0 0;
+        width: 35px;
+    }
+
+    #facebook_logo {
+        width: 35px;
+    }
+
+    #container_diduknow_flex {
+        flex-direction: column;
+    }
+
+    .images_about {
+        width: 100%;
+        margin: 0;
+    }
+
+    .didu_know_flex {
+        margin: 0 0 30px 0;
+    }
+
+    .heading_map {
+        font-family: Barlow_Semi_Condensed;
+        text-transform: uppercase;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    fieldset {
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    input[type=text] {
+        padding: 5px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    #send {
+        padding: 10px;
+    }
+
+    .menu.open {
+        width: 200px;
+        transition: width.7s;
+    }
+
+    .nav_links {
+        margin: 0 30px 0 30px;
     }
 
 }

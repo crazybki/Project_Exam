@@ -1,36 +1,44 @@
 
 //Countdown on pages
 
+fetch ("https://api.spacexdata.com/v3/launches/next")
+  .then(resultCounter => resultCounter.json())
+    .then ((res) => {
+        counter(res);
+    })
+  .catch(err => console.log(err))
 
+  function counter (resultCounter) {
+    var upcomingLaunch = new Date(resultCounter.launch_date_utc).getTime();
 
-var launchday = new Date('Mar 1, 2020 23:59:59').getTime();
-console.log(launchday)
+    var counterContainer = document.getElementById('counter');
+    var createSpan = document.createElement('span');
+    createSpan.id = 'counter_clock';
+    counterContainer.appendChild(createSpan);
 
-var countDown = setInterval(function() {
-    var thisDay = new Date().getTime();
-    var timeToLaunch = launchday - thisDay;
+    var countDownToLaunch = setInterval(function() {
+        var timeToday = new Date().getTime();
+        
 
-    var dayOfLaunch = Math.floor(timeToLaunch / (1000 * 60 * 60 * 24));
-    var hourOfLaunch = Math.floor((timeToLaunch % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutesOfLaunch = Math.floor((timeToLaunch % (1000 * 60 * 60)) / (1000 * 60));
-    var secondsOfLaunch = Math.floor((timeToLaunch % (1000 * 60)) / 1000);
+        if (timeToday < upcomingLaunch) {
+            startLaunch = upcomingLaunch - timeToday;
+            var countdownDay = Math.floor(startLaunch / (1000 * 60 * 60 * 24));
+            var countdownHours = Math.floor((startLaunch % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var countDownMinutes =  Math.floor((startLaunch % (1000 * 60 * 60)) / (1000 * 60));
+            var countDownSec = Math.floor((startLaunch  % (1000 * 60)) / 1000);
 
+            createSpan.innerHTML = resultCounter.mission_name + ' ' + ' Launch: ' + countdownDay + " days " + ('0' + countdownHours).slice(-2) + "hrs " + ('0' + countDownMinutes).slice(-2) + " min " + ('0' + countDownSec).slice(-2) + " sec";
 
+            if (startLaunch < 0) {
+                clearInterval(countDownToLaunch); 
+                document.createElement('p').innerHTML = "Liftoff!!";
+              }
+            } else{
+                createSpan.innerHTML = 'Launched';
+            }
+    }, 1000)
+}
 
-    var dayElement = document.getElementById('day_clock');
-    dayElement.innerHTML = dayOfLaunch;
-    var hourElement = document.getElementById('hour_clock');
-    hourElement.innerHTML = ('0' + hourOfLaunch).slice(-2);
-    var minutesElement = document.getElementById('minutes_clock');
-    minutesElement.innerHTML = ('0' + minutesOfLaunch).slice(-2);
-    var secondsElement = document.getElementById('seconds_clock');
-    secondsElement.innerHTML = ('0' + secondsOfLaunch).slice(-2);
-
-    if (timeToLaunch < 0) {
-        clearInterval(countDown); 
-        document.getElementById('launch_paragraph').innerHTML = "Liftoff!!";
-    }
-}, 1000);
 
 
 // Slide-in menu
