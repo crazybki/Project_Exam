@@ -27,7 +27,7 @@ fetch ("https://api.spacexdata.com/v3/launches/next")
             var countDownMinutes =  Math.floor((startLaunch % (1000 * 60 * 60)) / (1000 * 60));
             var countDownSec = Math.floor((startLaunch  % (1000 * 60)) / 1000);
 
-            createSpan.innerHTML = resultCounter.mission_name + ' ' + ' Launch: ' + countdownDay + " days " + ('0' + countdownHours).slice(-2) + "hrs " + ('0' + countDownMinutes).slice(-2) + " min " + ('0' + countDownSec).slice(-2) + " sec";
+            createSpan.innerHTML = 'Next launch: ' + countdownDay + " days " + ('0' + countdownHours).slice(-2) + " hrs " + ('0' + countDownMinutes).slice(-2) + " min " + ('0' + countDownSec).slice(-2);
 
             if (startLaunch < 0) {
                 clearInterval(countDownToLaunch); 

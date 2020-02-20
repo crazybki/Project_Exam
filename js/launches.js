@@ -151,7 +151,7 @@ function showAccordion () {
         if(openLaunches.classList.contains('open')) {
           accordionBtn.innerHTML = 'Close launches';
         } else {
-          accordionBtn.innerHTML = 'Show upcoming Launches'
+          accordionBtn.innerHTML = 'See upcoming Launches'
         }
 };
 

@@ -123,7 +123,6 @@ li {
     font-weight: 700;
     display: block;
     text-align: center;
-    text-transform: uppercase;
     padding-top: 65px;
 }
 
@@ -445,7 +444,7 @@ input[type=submit]:active {
     font-size: 38px;
     color: black;
     text-transform: uppercase;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 10px;
     padding: 10px;
 }
 
@@ -870,6 +869,10 @@ footer {
         font-size: 18px;
     }
 
+    fieldset {
+        max-width: 700px;
+    }
+
     /*---------------Launches-------------------------------------------------------------------------*/
 }
 @media only screen and (max-width: 767px) {
@@ -959,7 +962,7 @@ footer {
 
     /*---------------Counter-------------------------------------------------------------------------*/
     #counter_clock {
-        font-size: 16px;
+        font-size: 18px;
         position: relative;
         bottom: 50px;
     }       
@@ -1004,11 +1007,13 @@ footer {
     #show_past_launchesBtn {
         width: 80%;
         margin: 40px 0 0 35px;
+        font-size: 16px
     }
     
     #show_launches {
         width: 80%;
         margin: 30px 0 0 35px;
+        font-size: 16px;
     }
 
     .past_launches {
