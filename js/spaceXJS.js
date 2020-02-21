@@ -12,9 +12,17 @@ fetch ("https://api.spacexdata.com/v3/launches/next")
     var upcomingLaunch = new Date(resultCounter.launch_date_utc).getTime();
 
     var counterContainer = document.getElementById('counter');
+
+    var nameOfMission = document.createElement('p');
+    nameOfMission.classList = 'missionname_counter';
+    nameOfMission.innerHTML = 'Next launch: ' + resultCounter.mission_name;
+    counterContainer.appendChild(nameOfMission)
+
+    
     var createSpan = document.createElement('span');
     createSpan.id = 'counter_clock';
     counterContainer.appendChild(createSpan);
+
 
     var countDownToLaunch = setInterval(function() {
         var timeToday = new Date().getTime();
@@ -27,7 +35,7 @@ fetch ("https://api.spacexdata.com/v3/launches/next")
             var countDownMinutes =  Math.floor((startLaunch % (1000 * 60 * 60)) / (1000 * 60));
             var countDownSec = Math.floor((startLaunch  % (1000 * 60)) / 1000);
 
-            createSpan.innerHTML = 'Next launch: ' + countdownDay + " days " + ('0' + countdownHours).slice(-2) + " hrs " + ('0' + countDownMinutes).slice(-2) + " min " + ('0' + countDownSec).slice(-2);
+            createSpan.innerHTML = countdownDay + " Days " + ('0' + countdownHours).slice(-2) + " Hrs " + ('0' + countDownMinutes).slice(-2) + " Min " + ('0' + countDownSec).slice(-2);
 
             if (startLaunch < 0) {
                 clearInterval(countDownToLaunch); 
