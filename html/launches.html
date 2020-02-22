@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="./../CSS/spaceX.css" type="text/css" rel="stylesheet">
+    <meta name="keywords" content="See our launches. Here you will find all our previous launches, and upcoming launching.">
+    <meta name="keywords" content="SpaceX, SpaceX launches, Falcon 9, Dragon, falcon 9 launches, Dragon launches">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>See our our launches</title>
@@ -13,12 +15,12 @@
             <ul>
                 <button id="hamburger">&#9776;</button>
                 <a href="../html/index.html" id="img_link"><img class="spacelogo_tablet" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a>
-                    <div class="menu">
-                        <li><a href="../html/index.html" id="img_tablets_mobile"><img id="spacex_logo" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a></li>
-                        <li><a class="nav_links" href="#">Launches</a></li>
-                        <li><a class="nav_links" href="../html/about.html">About</a></li>
-                        <li><a class="nav_links" href="contact_us.html">Contact</a></li>
-                    </div>
+                <div class="menu">
+                    <li><a href="../html/index.html" id="img_tablets_mobile"><img id="spacex_logo" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a></li>
+                    <li><a class="nav_links" href="../html/index.html">home</a></li>
+                    <li><a class="highlight" href="../html/launches.html">Launches</a></li>
+                    <li><a class="nav_links" href="../html/about.html">About</a></li>
+                    <li><a class="nav_links" href="contact_us.html">Contact</a></li>
                 </div>
             </ul>
         </nav>
@@ -31,30 +33,34 @@
             </div>
         </div>
     </header>
-    <h1 class="frontpage_heading">Our launches</h1>
-    <div id="last_launch"></div>
+    <main>
+        <section>
+            <h1 class="frontpage_heading">Our launches</h1>
+            <div id="last_launch"></div>
+        </section>   
+        <section>
+            <div id="container_launches">
+                <div id="launches_flex">
+                    <button id="show_past_launchesBtn">See past launches</button>
+                    <div class="single_past_launches"></div>
+                </div>
 
-    <div id="container_launches">
-        <div id="launches_flex">
-            <button id="show_past_launchesBtn">See past launches</button>
-            <div class="single_past_launches"></div>
-        </div>
-
-        <div id="launches_flex1">
-            <button id="show_launches">See upcoming Launches</button>
-            <div class="single_launch"></div>
-        </div>
-    </div>
-    
+                <div id="launches_flex1">
+                    <button id="show_launches">See upcoming Launches</button>
+                    <div class="single_launch"></div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <div class="socialmedia">    
-            <img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo">
+        <div class="socialmedia">   
+            <a href="https://www.facebook.com/SpaceExplorationTechnologiesCorp/"><img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo"></a>
         </div>
         <div class="socialmedia">    
-            <img id="instagram_logo" src="../bilder/social_media_icons/instagram_White_logo.svg" alt="Image of Instagram logo">
+            <a href="https://www.instagram.com/spacex/"><img id="instagram_logo" src="../bilder/social_media_icons/instagram_White_logo.svg" alt="Image of Instagram logo"></a>
         </div>
         <div class="socialmedia">
-            <img id="twitter_logo" src="../bilder/social_media_icons/Twitter_Social_Icon_Circle_White.png" alt="image of Twitter icon">
+            <a href="https://twitter.com/spacex"><img id="twitter_logo" src="../bilder/social_media_icons/Twitter_Social_Icon_Circle_White.png" alt="image of Twitter icon"></a>
         </div>
     </footer>
     <script src="../js/launches.js"></script>  

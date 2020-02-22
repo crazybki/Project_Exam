@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Find out who we are, see where we work and our facilities">
+    <meta name="description" content="Find out who SpaceX are, see where we work and our facilities">
     <meta name="keywords" content="SpaceX, about us, headquarters, facilities, test facilities">
     <link href="./../CSS/spaceX.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,73 +15,81 @@
             <ul>
                 <button id="hamburger">&#9776;</button>
                 <a href="../html/index.html" id="img_link"><img class="spacelogo_tablet" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a>
-                    <div class="menu">
-                        <li><a href="../html/index.html" id="img_tablets_mobile"><img id="spacex_logo" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a></li>
-                        <li><a class="nav_links" href="#">Launches</a></li>
-                        <li><a class="nav_links" id="higlight" href="../html/about.html">About</a></li>
-                        <li><a class="nav_links" href="contact_us.html">Contact</a></li>
-                    </div>
+                <div class="menu">
+                    <li><a href="../html/index.html" id="img_tablets_mobile"><img id="spacex_logo" src="../bilder/spacerx-logo.svg" alt="spaceX Logo"></a></li>
+                    <li><a class="nav_links" href="../html/index.html">home</a></li>
+                    <li><a class="nav_links" href="../html/launches.html">Launches</a></li>
+                    <li><a class="highlight" href="../html/about.html">About</a></li>
+                    <li><a class="nav_links" href="contact_us.html">Contact</a></li>
                 </div>
             </ul>
         </nav>
     <img class="hero_imgfront" src="../bilder/AboutUs_Hero.jpg" alt="image of SpaceX dragon a cargo spacecraft">
     <div id="nextlaunch">
         <div id="container_clock">
-            <div id="counter">
-            </div> 
+            <div id="counter"></div> 
         </div>
     </div>
 </header>
-<section>
-    <div id="intro_about">
-        <h1 class="heading_about">our mission</h1>
-        <p id="mission_statement">To revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</p>
-        <p id="aboutus_statement">SpaceX is the first private aerospace company that has launched rockets and spaceshuttles that is reusable. Enabling us to use the technical equipment several times, reducing the costs and enhancing our ability to focus on our main goal.</p>
-        <p id="aboutus_statement_2">SpaceX is devoloping and working with NASA, and are now delivering and launching spaceshuttles for human transport and resupplies to the International Space Station (ISS)</p>
-    </div>
-</section>
+<main>
+    <section>
+        <div id="intro_about">
+            <h1 class="heading_about">our mission</h1>
+            <p id="mission_statement">To revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</p>
+            <p id="aboutus_statement">SpaceX is the first private aerospace company that has launched rockets and spaceshuttles that is reusable. Enabling us to use the technical equipment several times, reducing the costs and enhancing our ability to focus on our main goal.</p>
+            <p id="aboutus_statement_2">SpaceX is devoloping and working with NASA, and are now delivering and launching spaceshuttles for human transport and resupplies to the International Space Station (ISS)</p>
+        </div>
+    </section>
 
-<section>
-    <div id="did_u_know_container">
-        <h2 class="heading2_about">Did you know?</h2>
-        <div id="container_diduknow_flex">
-            <div class="didu_know_flex">
-                <img class="images_about" src="../bilder/did_u_know_people_working.jpg" alt="Image of launch center in SpaceX">
-                <p class="paragraph_about">There are over 6000 people working in SpaceX.</p>
-            </div>
-            <div class="didu_know_flex">
-                <img class="images_about" src="../bilder/did_u_know_Falcon9.jpg" alt="Image of falcon 9 rocket from SpaceX launches">
-                <p class="paragraph_about">Falcon 9 can launch and land on its own, making it possible to reuse the rocket.</p>
-            </div>
-            <div class="didu_know_flex">
-                <img class="images_about" src="../bilder/did_u_know_Dragon.jpg" alt="image of a reusable dragon, a space cargo by SpaceX">
-                <p class="paragraph_about">Dragon has been launched and reused three times. Reducing the costs for launch using the same hardware.</p>
+    <section>
+        <div id="did_u_know_container">
+            <h2 class="heading2_about">Did you know?</h2>
+            <div id="container_diduknow_flex">
+                <div class="didu_know_flex">
+                    <img class="images_about" src="../bilder/did_u_know_people_working.jpg" alt="Image of launch center in SpaceX">
+                    <p class="paragraph_about">There are over 6000 people working in SpaceX.</p>
+                </div>
+                <div class="didu_know_flex">
+                    <img class="images_about" src="../bilder/did_u_know_Falcon9.jpg" alt="Image of falcon 9 rocket from SpaceX launches">
+                    <p class="paragraph_about">Falcon 9 can launch and land on its own, making it possible to reuse the rocket.</p>
+                </div>
+                <div class="didu_know_flex">
+                    <img class="images_about" src="../bilder/did_u_know_Dragon.jpg" alt="image of a reusable dragon, a space cargo by SpaceX">
+                    <p class="paragraph_about">Dragon has been launched and reused three times. Reducing the costs for launch using the same hardware.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div id="background_container">
-        <h2 class="heading_about">Our facilities</h2>
-        <div id="map_container">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.794603296331!2d-118.33047334872431!3d33.92068553200296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b5dee46db32d%3A0x5589bf4232c10232!2sSpacex!5e0!3m2!1sno!2sno!4v1580580013501!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <h3 class="heading_map">Headquarters</h3>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.8576942080663!2d-120.6174909487126!3d34.63303629424997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ec23f079af29c3%3A0xe002d5ad4d9c26cb!2sSpaceX%20Landing%20Zone%204!5e0!3m2!1sno!2sno!4v1580580221813!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <h3 class="heading_map">Testfacilities - Austin Texas</h3>
-                <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1026545642644!2d-97.43530144876333!3d31.411297659570256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86455f8d4d5e805b%3A0x51f861fbdc84008e!2sSpaceX%20Rocket%20Development%20Facility!5e0!3m2!1sno!2sno!4v1580580379902!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <h3 class="heading_map">Testfacilities - Austin Texas</h3>
+    </section>
+
+    <section>
+        <div id="background_container">
+            <h2 class="heading_about">Our facilities</h2>
+            <div id="map_container">
+                <div class="map">
+                    <h3 class="heading_map">Headquarters</h3>
+                    <iframe class="maps_about" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.794603296331!2d-118.33047334872431!3d33.92068553200296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b5dee46db32d%3A0x5589bf4232c10232!2sSpacex!5e0!3m2!1sno!2sno!4v1580580013501!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div class="map">
+                    <h3 class="heading_map">Austin Texas</h3>
+                    <iframe class="maps_about" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.8576942080663!2d-120.6174909487126!3d34.63303629424997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ec23f079af29c3%3A0xe002d5ad4d9c26cb!2sSpaceX%20Landing%20Zone%204!5e0!3m2!1sno!2sno!4v1580580221813!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div class="map">
+                    <h3 class="heading_map">Austin Texas</h3>
+                    <iframe class="maps_about"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.1026545642644!2d-97.43530144876333!3d31.411297659570256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86455f8d4d5e805b%3A0x51f861fbdc84008e!2sSpaceX%20Rocket%20Development%20Facility!5e0!3m2!1sno!2sno!4v1580580379902!5m2!1sno!2sno" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 <footer>
-    <div class="socialmedia">    
-        <img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo">
+    <div class="socialmedia">   
+        <a href="https://www.facebook.com/SpaceExplorationTechnologiesCorp/"><img id="facebook_logo" src="../bilder/social_media_icons/f_logo_RGB-White_72.png" alt="Image of facebook logo"></a>
     </div>
     <div class="socialmedia">    
-        <img id="instagram_logo" src="../bilder/social_media_icons/instagram_White_logo.svg" alt="Image of Instagram logo">
+        <a href="https://www.instagram.com/spacex/"><img id="instagram_logo" src="../bilder/social_media_icons/instagram_White_logo.svg" alt="Image of Instagram logo"></a>
     </div>
     <div class="socialmedia">
-        <img id="twitter_logo" src="../bilder/social_media_icons/Twitter_Social_Icon_Circle_White.png" alt="image of Twitter icon">
+        <a href="https://twitter.com/spacex"><img id="twitter_logo" src="../bilder/social_media_icons/Twitter_Social_Icon_Circle_White.png" alt="image of Twitter icon"></a>
     </div>
 </footer>
 <script src="../js/spaceXJS.js"></script>

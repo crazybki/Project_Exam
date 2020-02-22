@@ -41,7 +41,7 @@ function latestRocket (latestLaunch) {
 
     //Get Launchdate
     var latestLaunchDay = document.createElement('p');
-    latestLaunchDay.innerHTML = 'Launched: ' + latestLaunch.launch_date_utc.slice(0,-2);
+    latestLaunchDay.innerHTML = 'Launched: ' + latestLaunch.launch_date_utc.slice(0,-14);
     latestLaunchDay.id = 'launch_date';
     containerLaunches.appendChild(latestLaunchDay);
 
@@ -108,7 +108,7 @@ function upComingLaunches (result) {
         //Create heading and fetch from API
         var futureLaunch = document.createElement('h2');
         futureLaunch.innerHTML = 'Mission: ' + result[j].mission_name;
-        futureLaunch.classList = 'launch_heading';
+        futureLaunch.id = 'launch_heading_upcoming';
         createDiv.appendChild(futureLaunch);
         
         //Create span for counter
@@ -121,12 +121,6 @@ function upComingLaunches (result) {
         launchPlace.innerHTML = 'Launch site: ' + result[j].launch_site.site_name_long;
         launchPlace.classList = 'launch_place';
         createDiv.appendChild(launchPlace);
-
-        // Creates info about rocket name
-        var getRocket = document.createElement('p');
-        getRocket.innerHTML = 'Name of rocket: ' + result[j].rocket.rocket_name
-        getRocket.classList = 'rocket';
-        createDiv.appendChild(getRocket);
 
         
         //nextlaunch defined here but passes as an argument to function createCountdown

@@ -78,11 +78,11 @@ li {
     margin: 0px 60px 0 60px;
     font-size: 48px;
     text-decoration: none;
-    color: #A7A9AC;
+    color: white;
     text-transform: uppercase;
     font-family: Barlow_Semi_Condensed;
     padding: 8px;
-    transition: 0.5s;
+
 }
 
 .nav_links:hover {
@@ -158,8 +158,8 @@ li {
 
 
 .paragraph_front {
-    padding-bottom: 20px;
-    padding-top: 30px;
+    margin-bottom: 8px;
+    padding-top: 20px;
 }
 
 .frontpage_heading {
@@ -223,6 +223,7 @@ li {
 .middle_column_text {
     background-color: white;
     color: black;
+    margin-bottom: 20px;
 }
 
 #frontpage_middleheading {
@@ -240,10 +241,17 @@ li {
 /*--------------ABOUT HTML-------------------------------------------------------------------*/
 
 /*--------------NAVIGATION---------*/
-#higlight {
+.highlight {
     background-color: #005288;
     border-radius: 10px;
-    padding: 1px 30px;
+    padding: 1px;
+    margin: 0px 60px 0 60px;
+    font-size: 48px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Barlow_Semi_Condensed;
+    padding: 8px;
 }
 
 #img_link {
@@ -336,7 +344,18 @@ li {
 
 .map {
     flex: 1;
-    margin: 15px 15px;
+}
+
+.heading_map {
+    text-align: center;
+    font-size: 32px;
+    font-family: Barlow_Semi_Condensed;
+    text-transform: uppercase;
+}
+
+.maps_about {
+    width: 80%;
+    margin: 0 0 50px 80px
 }
 
 /*--------------ABOUT-LAYOUT-------------------------------------------------------------------*/
@@ -353,7 +372,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    background-color: #F5F5F5;
+    background-color: #d4ecff;
 }
 
 textarea {
@@ -365,7 +384,7 @@ textarea {
 }
 
 textarea:focus {
-    background-color: #F5F5F5;
+    background-color: #d4ecff;
 }
 
 fieldset {
@@ -429,17 +448,20 @@ input[type=submit]:active {
 
 /*--------------LAUNCHES-LAYOUT-------------------------------------------------------------------*/
 
-
+#launch_heading_upcoming {
+    font-size: 39px;
+    margin: 10px;
+}
 
 #container_launches {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 150px;
+    margin-bottom: 350px;
 } 
 
 #launches_flex {
     flex: 1;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 150px;
 
 }
 
@@ -515,23 +537,21 @@ input[type=submit]:active {
     background-color: #005288;
     color: white;
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
     border: none;
-    width: 97%;
-    height: 40px;
+    width: 80%;
+    height: 60px;
     outline: none;
-    transition: 1s;
-    margin: 40px 0 0 0;
+    margin: 80px 0 0 0;
     text-transform: uppercase;
 }
 
-#show_launches:hover {
-    background-color: #2575b3;
-}
 
 .upcoming_launch_info {
     background-color: white;
     margin: 20px 10px 20px 0;
+    width: 80%;
 }
 
 #show_past_launchesBtn {
@@ -540,17 +560,14 @@ input[type=submit]:active {
     font-family: Roboto;
     font-size: 20px;
     border: none;
-    width: 90%;
-    height: 40px;
+    font-weight: 600;
+    width: 80%;
+    height: 60px;
     outline: none;
-    transition: 1s;
-    margin: 40px 0 0 0;
+    margin: 80px 0 0 0;
     text-transform: uppercase;
 }
 
-#show_past_launchesBtn:hover {
-    background-color: #2575b3;
-}
 
 .single_past_launches {
     width: 100%;
@@ -579,7 +596,6 @@ input[type=submit]:active {
 #last_launch {
     background-color: #22272B;
     color: white;
-    margin: 0 0 30px 0;
     padding: 0 0 30px 0;
     max-width: 900px;
     margin: auto;
@@ -602,7 +618,7 @@ input[type=submit]:active {
 
 .past_launches {
     background-color: white;
-    width: 90%;
+    width: 80%;
     margin: 20px 0 20px 0;
     padding: 20px;
 }
@@ -657,9 +673,11 @@ footer {
 /*--------------FOOTER----------------------------------------------------------------------*/
 
 
+
+
 /*--------------MEDIAQUERIES TABLETS----------------------------------------------------*/
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
     /*--------NAVIGATION------------------*/
 
     #hamburger {
@@ -677,6 +695,9 @@ footer {
         display: none;
     }
 
+    #launches_flex {
+        margin: 0 0 0 10px;
+    }
 
     .menu {
         padding: 20px 0 0 0;
@@ -696,6 +717,11 @@ footer {
     .nav_links {
         font-size: 26px;
     }
+
+    .highlight {
+        font-size: 26px;
+        padding: 2px;
+    }
     
 
     .menu.open {
@@ -708,6 +734,10 @@ footer {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .nav_links:hover {
+        padding: 4px 8px 4px 8px;
     }
 
     /*------------COUNTDOWN-------------*/
@@ -726,6 +756,10 @@ footer {
     }
 
     #day_clock {
+        font-size: 32px;
+    }
+
+    .missionname_counter {
         font-size: 32px;
     }
 
@@ -816,10 +850,24 @@ footer {
 
     .paragraph_about {
         margin: 10px 30px 15px 10px;
+        text-align: center;
     }
     
     .images_about {
         margin: 25px 10px 10px 10px;
+    }
+
+    .heading_map {
+        text-align: center;
+        font-size: 26px;
+        font-family: Barlow_Semi_Condensed;
+        text-transform: uppercase;
+    }
+    
+    .maps_about {
+        width: 65%;
+        height: 65%;
+        margin: 0 0 30px 45px;
     }
     /*--------------CONTACT-LAYOUT-------------------------------------------------------------------*/
     textarea {
@@ -880,8 +928,34 @@ footer {
         max-width: 700px;
     }
 
-    /*---------------Launches-------------------------------------------------------------------------*/
+    .upcoming_launch_info {
+        width: 95%;
+    }
+
+    .past_launches {
+        width: 95%;
+
+    }
+
+    #launch_heading_upcoming {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    #show_past_launchesBtn {
+        width: 95%;
+    }
+
+    #show_launches {
+        width: 95%;
+    }
+
 }
+
+    /*---------------Launches-------------------------------------------------------------------------*/
+
+
+
 @media only screen and (max-width: 767px) {
 
     /*--------NAVIGATION------------------*/
@@ -896,6 +970,10 @@ footer {
 
     #hamburger {
         margin-top: 20px;
+    }
+
+    .highlight {
+        margin: 0 35px 0 35px;
     }
 
 
@@ -938,6 +1016,12 @@ footer {
         font-size: 18px;
     }
 
+    .missionname_counter {
+        font-size: 18px;
+        position: relative;
+        bottom: 15px;
+    }
+
       /*-------ABOUT PHONE----------------*/
 
     #mission_statement {
@@ -967,6 +1051,17 @@ footer {
         font-size: 16px;
     }
 
+    #map_container {
+        flex-direction: column;
+    }
+
+    .maps_about {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        padding: 0 0 30px 30px;
+    }
+
     /*---------------Counter-------------------------------------------------------------------------*/
     #counter_clock {
         font-size: 18px;
@@ -981,8 +1076,7 @@ footer {
     #nextlaunch{
         background-color: black;
         width: 100%;
-        height: 50px;
-        
+        height: 80px;
     }
 /*--------------COUNTER FRONT----------------------------------------------------*/
 
@@ -1084,6 +1178,7 @@ footer {
         text-transform: uppercase;
         margin: auto;
         padding-bottom: 20px;
+        font-size: 22px;
     }
 
     fieldset {
