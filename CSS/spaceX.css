@@ -55,8 +55,10 @@ p {
 }
 
 #spacex_logo {
-    width: 100%;
-    margin: 0 20px 0 20px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    left: 20px;
 }
 
 
@@ -965,7 +967,7 @@ footer {
 
     .spacelogo_tablet {
         width: 60%;
-        bottom: 45px;
+        margin-top: 6px;
     }
 
     #hamburger {
